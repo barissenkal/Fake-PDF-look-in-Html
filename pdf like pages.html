@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>pdf like pages</title>
+<style type="text/css">
+body{
+	background-color: rgb(222,222,222);
+	width: 100%;
+	height: 100%;
+	text-align: center;
+
+	padding: 0 20px;
+}
+.page{
+	margin: 24px auto;
+	background-color: white;
+	max-width: 960px;
+	width: 100%;
+
+	text-align: center;
+
+	/*-webkit-box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.20);
+	-moz-box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.20);
+	box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.20);*/
+	-webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.24);
+	-moz-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.24);
+	box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.24);
+}
+#mainfooter {
+
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:1rem;
+	line-height:1.4;
+	padding-top:10px;
+	padding-bottom: 30px;
+
+	text-align: center;
+
+	color: #888;
+	text-decoration: none !important;
+}
+#mainfooter a {
+	color: #777;
+	font-weight: bold;
+	text-decoration: none !important;
+}
+
+/* width 450 (iphone 6 inc) */
+@media (max-width : 450px) {
+	body {
+		padding: 0 10px;
+	}
+	.page{
+		margin: 14px auto;
+	}
+}
+
+</style>
+</head>
+<body>
+<!-- <div id="containermain"> -->
+
+<div class="page">
+	
+</div>
+
+<div class="page">
+	
+</div>
+<div class="page">
+	
+</div>
+<div class="page">
+	
+</div>
+
+<div id="mainfooter">
+      <p>Built by <a href="">Blank</a></p>
+</div>
+
+<!-- </div> -->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- <script src="js/blank.js"></script>-->
+<script type="text/javascript">
+function resizepage(){
+	var windowWidth = $(window).width();
+	var pageWidth = $('.page').outerWidth();
+	$('.page').height((pageWidth * 14241)/10000);
+}
+$(window).load(function(){
+	resizepage();
+});
+
+$( window ).resize(function() {
+	resizepage();
+});
+</script>
+</body>
+</html>
